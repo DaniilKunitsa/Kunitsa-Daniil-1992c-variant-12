@@ -31,5 +31,23 @@ namespace Куница_Даниил_1992с_Вариант_12
                 Console.WriteLine();
             }
         }
+        public static double FindMax(double[,] array)
+        {
+            double Max = array[0, 0];
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    if (i < j)
+                    {
+                        if (array[i, j] > Max)
+                        {
+                            Max = array[i, j];
+                        }
+                    }
+                }
+            }
+            return Max;
+        }
     }
 }
